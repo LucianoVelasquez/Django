@@ -1,0 +1,22 @@
+<h1>Welcome to {{ props }}</h1>
+<p>soy un parrafo</p>
+<ul>
+    <li>Tipos de datos:</li>
+    <li>Hola</li>
+    <li>{{props2}}</li>
+    <li>{{props3}}</li>
+    <li>{{props4}}</li>
+</ul>
+
+<h2>Pasando Distintos projects de BD a Cliente</h2>
+<ul> {% comment %} Sintaxis de Jinja: Haciendo un "map" de datos que vienen como props de la BD {% endcomment %}
+    {% for project in props5%}
+        <li>{{project.id}} - {{project.name}}</li>
+    {% endfor %}
+</ul>
+<p>Tareas: </p>
+<ul> {% comment %} JinjaLop: Haciendo un "map" de datos que vienen como props de la BD {% endcomment %}
+    {% for task in props6%}
+        <li>{{task.id}} - {{task.title}} del proyecto {{task.project_id}} </li>
+    {% endfor %}
+</ul>
