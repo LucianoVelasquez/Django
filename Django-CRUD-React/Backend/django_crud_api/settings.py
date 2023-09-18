@@ -128,7 +128,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Viene del modulo de corsheader
-CORS_ALLOWD_ORIGINS = ['http://localhost:3000/']  #Sirve para indicarle quien se puede conectar a nuestro servidor para hacer peticiones]
+CORS_ALLOWED_ORIGINS = [   #Sirve para indicarle quien se puede conectar a nuestro servidor para hacer peticiones]
+    'http://localhost:3000',
+]  
+
 #Viene del modulo coreapi para documentar automaticamente las api
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
