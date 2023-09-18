@@ -16,3 +16,20 @@ CORS_ALLOWD_ORIGINS = [  #Sirve para indicarle quien se puede conectar a nuestro
     
 ]
 ~~~
+## Modulo para Documentar API
+~~~
+pip install coreapi
+~~~
+Instalar en:
+~~~
+INSTALLED_APPS = [
+    .... ,
+    'coreapi',
+    ....
+]
+
+# In settings.py
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
+~~~
