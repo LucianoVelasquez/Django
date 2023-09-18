@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'coreapi',
     'tasks'
 ]
 
@@ -127,6 +128,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Viene del modulo de corsheader
-CORS_ALLOWD_ORIGINS = [  #Sirve para indicarle quien se puede conectar a nuestro servidor para hacer peticiones
-    
-]
+CORS_ALLOWD_ORIGINS = ['http://localhost:3000/']  #Sirve para indicarle quien se puede conectar a nuestro servidor para hacer peticiones]
+#Viene del modulo coreapi para documentar automaticamente las api
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
